@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
     res.send('App Is Running.');
 });
 const PORT = process.env.PORT || 5000;
-mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true })
+mongoose.connect("mongodb+srv://mahmoudhshukri:2873MhMA@cluster0.0puzrca.mongodb.net/memorysDB", { useNewUrlParser: true })
     .then(() => app.listen(PORT, () => console.log(`Server running on port: ${PORT}`)))
     .catch((error) => console.log(error.message));
 
